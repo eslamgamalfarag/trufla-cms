@@ -1,0 +1,88 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+    font-size: ($sizeValue * 16) * 1px;
+    font-size: $sizeValue * 1rem;
+}
+
+%extend_1 {
+    padding: 0 10%;
+    margin: 0;
+    color: $color_white;
+    font-weight: normal;
+}
+
+//original selectors
+//.supporting h3, .supporting p
+%extend_2 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//original selectors
+//.intro a, .intro a:visited
+%extend_3 {
+    position: relative;
+    display: inline-block;
+    padding: 1px 10px 1px 32px;
+    margin: -1px -10px -1px -6px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 1px;
+    color: $color_amulet_approx;
+    font-family: $font_3, $font_2;
+    text-transform: uppercase;
+}
+
+//original selectors
+//.intro a:hover, .intro a:focus
+%extend_4 {
+    z-index: 2;
+    color: $color_white;
+    background: $color_astral_approx;
+    text-decoration: none;
+}
+
+//original selectors
+//div.participation, div.benefits
+%extend_5 {
+    background-attachment: scroll, scroll, fixed;
+    background-color: $color_summer_green_50_approx;
+    background-repeat: repeat, repeat, no-repeat;
+    background-size: auto, auto, cover;
+}
+
+//original selectors
+//.design-selection li, .zen-resources li
+%extend_6 {
+    float: left;
+    width: 50%;
+    padding: 1.5em 10%;
+    border-top: solid 1px $color_surf_crest;
+    color: $color_pumice;
+    font-style: italic;
+}
+
+//original selectors
+//.design-selection .design-name, .zen-resources a, li.viewall a
+%extend_7 {
+    display: block;
+    margin-bottom: 0.25em;
+    font-family: $font_3, $font_2;
+    font-size: 1.2em;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+//original selectors
+//.design-archives .previous a, .design-archives .next a
+%extend_8 {
+    display: block;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    text-indent: 100%;
+    text-decoration: none;
+    white-space: nowrap;
+}
